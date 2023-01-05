@@ -13,6 +13,7 @@ export const SidebarContainer = styled.aside `
     align-items: center;
     top:0;
     left:0;
+    overflow-y:scroll;
     transition: 0.3s ease-in-out;
     opacity: ${({isOpen}) => (isOpen ? '100%' : '0')};
     top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
@@ -52,6 +53,7 @@ export const SidebarMenu = styled.ul `
 export const SidebarLink = styled (LinkS) `
     display: flex;
     align-items: center;
+    font-family: Yeserva One, Montserrat;
     justify-content: center;
     font-size: 1.5rem;
     text-decoration: none;
@@ -60,7 +62,6 @@ export const SidebarLink = styled (LinkS) `
     color: #fff;
     cursor: pointer;
     padding-top: 70px;
-    
 
     &:hover {
         color: #E7DD3F;
@@ -76,6 +77,7 @@ export const SideBtnWrap = styled.div `
 
 export const SidebarRoute = styled (LinkR) `
     border-radius: 50px;
+    font-family: Yeserva One, Montserrat;
     background: #E7DD3F;
     white-space: nowrap;
     padding: 16px 64px;

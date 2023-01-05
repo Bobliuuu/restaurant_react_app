@@ -30,6 +30,11 @@ export const NavbarContainer=styled.div`
 
 `;
 export const NavLogo= styled (LinkR)`
+    img {
+        width: 25%;
+        height: auto;
+    }
+    width: 40%;
     color:#fff;
     justify-self:flex-start;
     cursor:pointer;
@@ -39,6 +44,7 @@ export const NavLogo= styled (LinkR)`
     margin-left: 24px;
     font-weight:bold;
     text-decoration:none;
+    font-family: Yeserva One, Montserrat;
 `;
 
 export const MobileIcon=styled.div`
@@ -64,6 +70,8 @@ export const NavMenu=styled.ul `
     list-style:none;
     text-align:center;
     margin-right:-22px;
+    justify-content: center;
+
 
     @media screen and (max-width:768px) {
         display:none;
@@ -76,10 +84,12 @@ export const NavItem = styled.li `
 
 export const NavLinks= styled(LinkS)`
     color: #fff;
+    font-family: Yeserva One, Montserrat;
     display: flex;
     align-items:center;
     text-decoration: none;
-    padding: 0 1rem;
+    padding: 0 1.3rem;
+    white-space:nowrap;
     height: 100%;
     cursor: pointer;
 
@@ -110,6 +120,8 @@ export const NavBtnLink = styled (LinkR) `
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
+    font-family: Yeserva One, Montserrat;
+
 
     &:hover {
         transition: all 0.2s ease-in-out;
