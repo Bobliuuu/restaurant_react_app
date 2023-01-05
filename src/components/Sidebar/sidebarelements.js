@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link as LinkS } from 'react-scroll'
-import { Link as LinkR } from 'react-router-dom'
 import { FaTimes } from 'react-icons/fa'
+import Link from 'next/link'
 
 export const SidebarContainer = styled.aside `
     position: fixed;
@@ -13,6 +13,7 @@ export const SidebarContainer = styled.aside `
     align-items: center;
     top:0;
     left:0;
+    overflow-y:scroll;
     transition: 0.3s ease-in-out;
     opacity: ${({isOpen}) => (isOpen ? '100%' : '0')};
     top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
@@ -46,12 +47,12 @@ export const SidebarMenu = styled.ul `
     @media screen and (max-width: 480px) {
         grid-template-rows: repeat (6,60px);
     }
-
 `
 
 export const SidebarLink = styled (LinkS) `
     display: flex;
     align-items: center;
+    font-family: Yeserva One, Montserrat;
     justify-content: center;
     font-size: 1.5rem;
     text-decoration: none;
@@ -60,8 +61,6 @@ export const SidebarLink = styled (LinkS) `
     color: #fff;
     cursor: pointer;
     padding-top: 70px;
-    
-
     &:hover {
         color: #E7DD3F;
         transition: 0.2s ease-in-out;
@@ -74,8 +73,9 @@ export const SideBtnWrap = styled.div `
     padding-top: 70px;
 `
 
-export const SidebarRoute = styled (LinkR) `
+export const SidebarRoute = styled (Link) `
     border-radius: 50px;
+    font-family: Yeserva One, Montserrat;
     background: #E7DD3F;
     white-space: nowrap;
     padding: 16px 64px;
@@ -86,11 +86,9 @@ export const SidebarRoute = styled (LinkR) `
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
-
     &:hover {
         transition: all 0.2s ease-in-out;
         background: #fff;
         color: #010606;
     }
 `
-

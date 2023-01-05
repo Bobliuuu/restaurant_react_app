@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll'
+import Link from 'next/link'
 
 export const Nav = styled.nav`
     background: #000;
@@ -12,11 +12,9 @@ export const Nav = styled.nav`
     position: sticky;
     top:0;
     z-index:10;
-
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
     }
-
 `;
 
 export const NavbarContainer=styled.div`
@@ -27,9 +25,13 @@ export const NavbarContainer=styled.div`
     width:100%;
     padding: 0 24px;
     max-width: 1100px;
-
 `;
-export const NavLogo= styled (LinkR)`
+export const NavLogo= styled (Link)`
+    img {
+        width: 25%;
+        height: auto;
+    }
+    width: 40%;
     color:#fff;
     justify-self:flex-start;
     cursor:pointer;
@@ -39,11 +41,11 @@ export const NavLogo= styled (LinkR)`
     margin-left: 24px;
     font-weight:bold;
     text-decoration:none;
+    font-family: Yeserva One, Montserrat;
 `;
 
 export const MobileIcon=styled.div`
     display: none;
-
     @media screen and (max-width: 768px) {
         display:block;
         position: absolute;
@@ -64,7 +66,7 @@ export const NavMenu=styled.ul `
     list-style:none;
     text-align:center;
     margin-right:-22px;
-
+    justify-content: center;
     @media screen and (max-width:768px) {
         display:none;
     }
@@ -76,29 +78,28 @@ export const NavItem = styled.li `
 
 export const NavLinks= styled(LinkS)`
     color: #fff;
+    font-family: Yeserva One, Montserrat;
     display: flex;
     align-items:center;
     text-decoration: none;
-    padding: 0 1rem;
+    padding: 0 1.3rem;
+    white-space:nowrap;
     height: 100%;
     cursor: pointer;
-
     &.active {
         border-bottom: 3px solid #01bf71;
-
     }
 `;
 
 export const NavBtn= styled.nav`
     display: flex;
     align-items: center;
-
     @media screen and (max-width:768px) {
         display: none;
     }
 `
 
-export const NavBtnLink = styled (LinkR) `
+export const NavBtnLink = styled (Link) `
     border-radius: 50px;
     background: #E7DD3F;
     white-space: nowrap;
@@ -110,7 +111,7 @@ export const NavBtnLink = styled (LinkR) `
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
-
+    font-family: Yeserva One, Montserrat;
     &:hover {
         transition: all 0.2s ease-in-out;
         background:#fff;
